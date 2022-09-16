@@ -1,5 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:untitled/layer.dart' as layer;
+import 'package:untitled/Layer/layer.dart' as layer;
+import 'package:untitled/mainLayer.dart' as main;
+
+class App extends StatefulWidget{
+  @override
+  State<StatefulWidget> createState(){
+    return _PlayApp();
+  }
+}
+
+class _PlayApp extends State<App>{
+  @override
+  Widget build(BuildContext context){
+    return MainLayer();
+  }
+}
 
 class MainLayer extends StatelessWidget{
 
@@ -7,22 +22,36 @@ class MainLayer extends StatelessWidget{
   Widget build(BuildContext context){
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        centerTitle: true,
-        elevation: 0.0,
-        backgroundColor: Colors.white,
-        title: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            TextButton(onPressed: (){}, child: Image.asset('Icons/logo.png', fit: BoxFit.fill,),
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.white),)
-            //IconButton(onPressed: (){}, icon: Icon(Icons.menu_book), )
-          ],
-        ),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios),
-          onPressed: (){},
-          color: Colors.black,
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(50),
+        child: AppBar(
+          centerTitle: true,
+          elevation: 0.0,
+          backgroundColor: Colors.black,
+          title: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              TextButton(onPressed: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => (main.MainLayer())),
+                );
+              }, child: Image.asset('Icons/logo2.jpg', fit: BoxFit.fill),
+                style: TextButton.styleFrom(backgroundColor: Colors.black),)
+              //IconButton(onPressed: (){}, icon: Icon(Icons.menu_book), )
+            ],
+          ),
+
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back_ios),
+            onPressed: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => (main.MainLayer())),
+              );
+            },
+            color: Colors.white,
+          ),
         ),
       ),
       body: SingleChildScrollView(
@@ -30,22 +59,24 @@ class MainLayer extends StatelessWidget{
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(padding: EdgeInsets.all(20),
-              child: Image.asset("Icons/main.png",
-                width: 1200,
-                height: 1400,)
-            ),
-            Padding(padding: EdgeInsets.all(20),
-              child: ElevatedButton(onPressed: (){
+            Container(
+              color: Colors.black,
+              width: 1600,
+              child: TextButton(onPressed: (){
+
                 Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => (layer.method())),
-                );
-              }, child: Text("Next")),)
-          ],
-        ),
+                context,
+                MaterialPageRoute(builder: (context) => (layer.method())),
+              );},
+            child: Image.asset("Icons/main.png",
+            width: 600,
+            height: 800, fit: BoxFit.fill)
+          ),
         )
+        ],
       ),
+    ),
+    ),
     );
   }
 }

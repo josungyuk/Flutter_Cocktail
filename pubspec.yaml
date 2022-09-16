@@ -66,6 +66,10 @@ flutter:
     - Icons/logo.png
     - Icons/main.png
     - Icons/lastLayer.png
+    - Icons/test.png
+    - Icons/question.png
+    - Icons/bg.png
+    - Icons/logo2.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

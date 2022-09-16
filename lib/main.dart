@@ -7,7 +7,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-
+      debugShowCheckedModeBanner: false,
       title: 'Material Flutter App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -30,7 +30,6 @@ class _PlayApp extends State<App>{
     return layer.MainLayer();
   }
 }
-
 
 
 
