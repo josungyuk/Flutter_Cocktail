@@ -3,6 +3,7 @@ import 'package:untitled/main.dart';
 import 'package:untitled/Layer/layer3.dart' as layer;
 import 'package:untitled/Layer/layer1.dart' as prev;
 import 'package:untitled/mainLayer.dart' as main;
+import 'package:untitled/Logic/logic.dart' as logic;
 
 class method extends StatelessWidget {
   @override
@@ -21,12 +22,16 @@ class App extends StatefulWidget{
 class _PlayApp extends State<App>{
   List<Color> _color = [Colors.white, Colors.white, Colors.white, Colors.white];
   List<bool> btnState = [false, false, false, false];
+  String id = "도수3";
+  int value = 0;
 
   @override
   bool get wantKeepAlive => true;
 
   @override
   Widget build(BuildContext context) {
+    logic.CheckLogic.check;
+
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: PreferredSize(
@@ -75,13 +80,14 @@ class _PlayApp extends State<App>{
                         //padding: EdgeInsets.all(30),
                         child: Column(
                           children: [
-                            Text("동해물과 백두산이 마르고 닳도록\n하느님이 보우하사 우리나라 만세\n\n\n\n", style: TextStyle(fontSize: 15, color: Colors.white),),
+                            Text("오랫동안 즐기고 싶은가요?\n\n\n\n", style: TextStyle(fontSize: 15, color: Colors.white),),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 //====
                                 Padding(padding: EdgeInsets.all(15),
                                   child: ElevatedButton(onPressed: () {
+                                    logic.CheckLogic.check.update(id, (value) => 2, ifAbsent: () => 2);
 
                                     Navigator.push(
                                       context,
@@ -112,6 +118,7 @@ class _PlayApp extends State<App>{
 
                                 Padding(padding: EdgeInsets.all(15),
                                   child: ElevatedButton(onPressed: () {
+                                    logic.CheckLogic.check.update(id, (value) => 1, ifAbsent: () => 1);
 
                                     Navigator.push(
                                       context,
@@ -142,6 +149,7 @@ class _PlayApp extends State<App>{
 
                                 Padding(padding: EdgeInsets.all(15),
                                   child: ElevatedButton(onPressed: () {
+                                    logic.CheckLogic.check.update(id, (value) => -1, ifAbsent: () => -1);
 
                                     Navigator.push(
                                       context,
@@ -171,6 +179,7 @@ class _PlayApp extends State<App>{
                                 ),
                                 Padding(padding: EdgeInsets.all(15),
                                   child: ElevatedButton(onPressed: () {
+                                    logic.CheckLogic.check.update(id, (value) => -2, ifAbsent: () => -2);
 
                                     Navigator.push(
                                       context,

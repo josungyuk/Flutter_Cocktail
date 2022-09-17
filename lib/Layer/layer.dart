@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:untitled/main.dart';
 import 'package:untitled/Layer/layer1.dart' as layer;
 import 'package:untitled/mainLayer.dart' as main;
+import 'package:untitled/Logic/logic.dart' as logic;
 
 class method extends StatelessWidget {
   @override
@@ -20,6 +21,9 @@ class App extends StatefulWidget{
 class _PlayApp extends State<App>{
   List<Color> _color = [Colors.white, Colors.white, Colors.white, Colors.white];
   List<bool> btnState = [false, false, false, false];
+  String id = "도수1";
+  int value = 0;
+
 
 
   @override
@@ -27,6 +31,8 @@ class _PlayApp extends State<App>{
 
   @override
     Widget build(BuildContext context) {
+    logic.CheckLogic.check;
+
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: PreferredSize(
@@ -74,13 +80,14 @@ class _PlayApp extends State<App>{
                           //padding: EdgeInsets.all(30),
                           child: Column(
                             children: [
-                              Text("동해물과 백두산이 마르고 닳도록\n하느님이 보우하사 우리나라 만세\n\n\n\n", style: TextStyle(fontSize: 15, color: Colors.white),),
+                              Text("오늘은 가볍게 마시고 싶나요?\n\n\n\n", style: TextStyle(fontSize: 15, color: Colors.white),),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   //====
                                   Padding(padding: EdgeInsets.all(15),
                                     child: ElevatedButton(onPressed: () {
+                                      logic.CheckLogic.check.update(id, (value) => 2, ifAbsent: () => 2);
 
                                       Navigator.push(
                                         context,
@@ -111,6 +118,7 @@ class _PlayApp extends State<App>{
 
                                   Padding(padding: EdgeInsets.all(15),
                                     child: ElevatedButton(onPressed: () {
+                                      logic.CheckLogic.check.update(id, (value) => 1, ifAbsent: () => 1);
 
                                       Navigator.push(
                                         context,
@@ -141,6 +149,7 @@ class _PlayApp extends State<App>{
 
                                   Padding(padding: EdgeInsets.all(15),
                                     child: ElevatedButton(onPressed: () {
+                                      logic.CheckLogic.check.update(id, (value) => -1, ifAbsent: () => -1);
 
                                       Navigator.push(
                                         context,
@@ -170,6 +179,7 @@ class _PlayApp extends State<App>{
                                   ),
                                   Padding(padding: EdgeInsets.all(15),
                                     child: ElevatedButton(onPressed: () {
+                                      logic.CheckLogic.check.update(id, (value) => -2, ifAbsent: () => -2);
 
                                       Navigator.push(
                                         context,
@@ -201,7 +211,7 @@ class _PlayApp extends State<App>{
                                 ],
                               ),
                               Text("매우 아니다         조금 아니다       조금 맞다        매우 맞다   \n\n\n", style: TextStyle(fontSize: 15, color: Colors.white),),
-                              Padding(padding: EdgeInsets.all(0),
+                              Padding(padding: EdgeInsets.all(15),
                               child: LinearProgressIndicator(
                                 valueColor: new AlwaysStoppedAnimation<Color>(Colors.red.shade100),
                                 backgroundColor: Colors.red[600],

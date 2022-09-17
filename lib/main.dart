@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/mainLayer.dart' as layer;
 
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -8,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Material Flutter App',
+      title: 'Shaker',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

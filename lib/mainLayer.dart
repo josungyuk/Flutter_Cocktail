@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:untitled/Layer/layer.dart' as layer;
 import 'package:untitled/mainLayer.dart' as main;
 import 'package:untitled/resultPage/result_BDFN.dart' as result;
+import 'package:untitled/Logic/logic.dart' as logic;
 
 class App extends StatefulWidget{
   @override
@@ -18,7 +19,6 @@ class _PlayApp extends State<App>{
 }
 
 class MainLayer extends StatelessWidget{
-
   @override
   Widget build(BuildContext context){
     return Scaffold(
@@ -55,7 +55,7 @@ class MainLayer extends StatelessWidget{
               );},
             child: Image.asset("Icons/main.png",
             width: 400,
-            height: 800, fit: BoxFit.fill)
+            height: 700, fit: BoxFit.fill)
           ),
         )
         ],

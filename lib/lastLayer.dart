@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/Layer/layer.dart' as layer;
 import 'package:untitled/mainLayer.dart' as main;
+import 'package:untitled/Logic/logic.dart' as logic;
 
 class App extends StatefulWidget{
   @override
@@ -20,6 +21,8 @@ class LastLayer extends StatelessWidget{
 
   @override
   Widget build(BuildContext context){
+    String str = logic.CheckLogic.operateLogic();
+
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: PreferredSize(
@@ -45,18 +48,27 @@ class LastLayer extends StatelessWidget{
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                color: Colors.black,
-                width: 1600,
-                child: TextButton(onPressed: (){
+                //color: Colors.black,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage("Icons/lastLayer.png"), fit: BoxFit.fill
+                      )
+                  ),
 
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => (main.MainLayer())),
-                  );},
-                    child: Image.asset("Icons/lastLayer.png",
-                        width: 400,
-                        height: 800, fit: BoxFit.fill)
-                ),
+                width: 400,
+                height: 700,
+                child: Column(
+                  children: [
+                    TextButton(onPressed: (){
+
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => (main.MainLayer())),
+                      );},
+                      child: Text("\n\n\n\n\n" + str, style: TextStyle(fontSize: 30, color: Colors.black),),
+                    ),
+                  ],
+                )
               )
             ],
           ),
