@@ -67,9 +67,30 @@ flutter:
     - Icons/main.png
     - Icons/lastLayer.png
     - Icons/test.png
-    - Icons/question.png
+    - Icons/question.jpg
     - Icons/bg.png
     - Icons/logo2.jpg
+    - Icons/Cocktail/BDFN.jpg
+    - Icons/Cocktail/BDFP.png
+    - Icons/Cocktail/BDSN.jpg
+    - Icons/Cocktail/BDSP.jpg
+    - Icons/Cocktail/BWFN.jpg
+    - Icons/Cocktail/BWFP.jpg
+    - Icons/Cocktail/BWSN.jpg
+    - Icons/Cocktail/BWSP.jpg
+    - Icons/Cocktail/LDFN.jpg
+    - Icons/Cocktail/LDFP.jpg
+    - Icons/Cocktail/LDSN.jpg
+    - Icons/Cocktail/LDSP.jpg
+    - Icons/Cocktail/LWFN.jpg
+    - Icons/Cocktail/LWFP.png
+    - Icons/Cocktail/LWSN.jpg
+    - Icons/Cocktail/LWSP.jpg
+    - Icons/Cocktail/test.jpg
+    - Icons/logot.png
+    - Icons/logon.png
+    - Icons/logo2.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

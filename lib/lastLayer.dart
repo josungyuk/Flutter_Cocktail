@@ -21,37 +21,22 @@ class LastLayer extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.black,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(50),
         child: AppBar(
           centerTitle: true,
+          automaticallyImplyLeading: false,
           elevation: 0.0,
-          backgroundColor: Colors.black,
+          backgroundColor: Color(0xFF4F2926),
           title: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              TextButton(onPressed: (){
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => (main.MainLayer())),
-                );
-              }, child: Image.asset('Icons/logo.png', fit: BoxFit.fill, width: 600, height: 60,),
-                style: TextButton.styleFrom(backgroundColor: Colors.black),)
-              //IconButton(onPressed: (){}, icon: Icon(Icons.menu_book), )
+              Image.asset('Icons/logo.png', fit: BoxFit.fill, width: 400, height: 60,),
             ],
           ),
 
-          leading: IconButton(
-            icon: Icon(Icons.arrow_back_ios),
-            onPressed: (){
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => (main.MainLayer())),
-              );
-            },
-            color: Colors.white,
-          ),
+
         ),
       ),
       body: SingleChildScrollView(
@@ -69,7 +54,7 @@ class LastLayer extends StatelessWidget{
                     MaterialPageRoute(builder: (context) => (main.MainLayer())),
                   );},
                     child: Image.asset("Icons/lastLayer.png",
-                        width: 600,
+                        width: 400,
                         height: 800, fit: BoxFit.fill)
                 ),
               )
