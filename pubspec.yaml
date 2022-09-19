@@ -37,6 +37,9 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  flutter_email_sender: ^5.1.0
+  url_launcher: ^6.1.5
+  fluttertoast: ^8.0.9
 
 dev_dependencies:
   flutter_test:
@@ -70,26 +73,28 @@ flutter:
     - Icons/question.jpg
     - Icons/bg.png
     - Icons/logo2.jpg
-    - Icons/Cocktail/BDFN.jpg
+    - Icons/Cocktail/BDFN.png
     - Icons/Cocktail/BDFP.png
-    - Icons/Cocktail/BDSN.jpg
-    - Icons/Cocktail/BDSP.jpg
-    - Icons/Cocktail/BWFN.jpg
-    - Icons/Cocktail/BWFP.jpg
-    - Icons/Cocktail/BWSN.jpg
-    - Icons/Cocktail/BWSP.jpg
-    - Icons/Cocktail/LDFN.jpg
-    - Icons/Cocktail/LDFP.jpg
-    - Icons/Cocktail/LDSN.jpg
-    - Icons/Cocktail/LDSP.jpg
-    - Icons/Cocktail/LWFN.jpg
+    - Icons/Cocktail/BDSN.png
+    - Icons/Cocktail/BDSP.png
+    - Icons/Cocktail/BWFN.png
+    - Icons/Cocktail/BWFP.png
+    - Icons/Cocktail/BWSN.png
+    - Icons/Cocktail/BWSP.png
+    - Icons/Cocktail/LDFN.png
+    - Icons/Cocktail/LDFP.png
+    - Icons/Cocktail/LDSN.png
+    - Icons/Cocktail/LDSP.png
+    - Icons/Cocktail/LWFN.png
     - Icons/Cocktail/LWFP.png
-    - Icons/Cocktail/LWSN.jpg
-    - Icons/Cocktail/LWSP.jpg
-    - Icons/Cocktail/test.jpg
+    - Icons/Cocktail/LWSN.png
+    - Icons/Cocktail/LWSP.png
     - Icons/logot.png
     - Icons/logon.png
     - Icons/logo2.png
+    - Icons/facebook.jpg
+    - Icons/twitter.jpg
+    - Icons/link.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
